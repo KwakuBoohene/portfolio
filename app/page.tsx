@@ -1,5 +1,7 @@
 // import Image from 'next/image';
-import React from 'react';
+"use client";
+
+import React, { useRef } from 'react';
 import WelcomeModal from '@/components/modals/welcome-modal';
 import Link from 'next/link';
 import { BEHANCE_URL, LINKEDIN_URL, TWITTER_URL } from '@/lib/constants';
@@ -13,6 +15,12 @@ import Carousel from '../components/Carousel'
 
 
 export default function Home() {
+  const bottom_of_page = useRef<HTMLDivElement>(null)
+
+  const scrollToBottomOfPage = () =>{
+    bottom_of_page.current?.scrollIntoView({behavior:"smooth"})
+  }
+
   return (
     <>
       {/* <WelcomeModal /> */}
@@ -44,12 +52,12 @@ export default function Home() {
           </div>
 
         </div>
-        <div className='mt- flex flex-col absolute bottom-5 items-center justify-center'>
-          <div className='flex flex-col items-center justify-center  text-2xl'>
-            <SlMouse className="text-3xl" />
-            <HiOutlineChevronDoubleDown />
+        <div className='mt- flex flex-col absolute bottom-5 items-center justify-center cursor-pointer'>
+          <div onClick={scrollToBottomOfPage} className='flex flex-col items-center justify-center  text-2xl'>
+            <SlMouse className="text-3xl " />
+            <HiOutlineChevronDoubleDown  />
           </div>
-          <p className='text-sm text-bluey font-light '>Scroll Down</p>
+          <p onClick={scrollToBottomOfPage} className='text-sm text-bluey font-light   '>Scroll Down</p>
         </div>
       </section>
 
@@ -81,7 +89,7 @@ export default function Home() {
           title='Case Studies'
           sub='Selected Projects'
         />
-        <div className='grid md:grid-cols-2  gap-x-8 gap-y-8 md:gap-y-12 xl:gap-y-16'>
+        <div ref={bottom_of_page} className='grid md:grid-cols-2  gap-x-8 gap-y-8 md:gap-y-12 xl:gap-y-16'>
           {
             projects.studies.map((project) => (
               <ProjectCard key={project.title} variant="studies" project={project} />
