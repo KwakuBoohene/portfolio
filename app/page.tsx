@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       {/* <WelcomeModal /> */}
-      <section className='min-h-[80vh] relative flex flex-col items-center justify-center md:p-4'>
+      <section className='md:min-h-[80vh] pb-28 md:pb-0 relative flex flex-col items-center justify-center  md:p-4'>
         <div className='flex flex-col justify-center max-w-5xl  items-center text-center gap-4'>
           <p className='text-xl md:text-2xl font-light'>Hiya 👋🏾</p>
           <h1 className='text-5xl lg:text-6xl text-[#484A56] font-'>
@@ -54,10 +54,9 @@ export default function Home() {
         </div>
         <div className='mt- flex flex-col absolute bottom-5 items-center justify-center cursor-pointer'>
           <div onClick={scrollToBottomOfPage} className='flex flex-col items-center justify-center  text-2xl'>
-            <SlMouse className="text-3xl " />
             <HiOutlineChevronDoubleDown  />
           </div>
-          <p onClick={scrollToBottomOfPage} className='text-sm text-bluey font-light   '>Scroll Down</p>
+         
         </div>
       </section>
 

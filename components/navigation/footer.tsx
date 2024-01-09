@@ -19,11 +19,12 @@ const FooterViews = {
 const Footer = () => {
     const [view, setView] = useState<FooterProps["view"]>("copy")
     const pathname = usePathname()
+   
 
     useEffect(() => {
         if (pathname === "/") {
             setView("primary")
-        } else if (pathname === "/about" || pathname === "/resume") {
+        } else if (pathname.includes("/about") || pathname.includes("/resume")) {
             setView("secondary")
         } else {
             setView("copy")
