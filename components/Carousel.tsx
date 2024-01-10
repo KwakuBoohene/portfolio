@@ -17,12 +17,7 @@ const Carousel: React.FC<CarouselProps> = ({ projects }) => {
             msOverflowStyle: 'none'
         }}>
             {projects.map((project) => (
-                <div key={project.title} style={{ 
-                    scrollSnapAlign: 'start',
-                    flex: '0 0 auto',
-                    width: '300px',
-                    marginRight: '16px',
-                 }}>
+                <div key={project.title} className='snap-start md:w-[300px] w-28 mr-4 flex-grow-0 flex-shrink-0 basis-auto'>
                     <ProjectCard key={project.title} variant="web" project={project} />
                 </div>
             ))}

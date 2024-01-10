@@ -13,7 +13,7 @@ import { HiOutlineChevronDoubleDown } from 'react-icons/hi2'
 const AboutPage = () => {
     return (
         <section className='py-16 flex flex-col gap-8 max-md:py-8'>
-            <div className='flex flex-col gap-4'>
+            <div className='flex gap-4'>
                 <Heading
                     sub='About Me'
                     title={`Hi, I'm Ayeley 👋🏾`}
@@ -22,6 +22,11 @@ const AboutPage = () => {
                     I am a versatile creative based in Accra. I am passionate about creating beautiful digital experiences for people, especially my community, to make lives easier. I love to find potential solutions to real problems because my goal is to help people, plus,  I enjoy seeing the effects brilliant digital products have on people and businesses. I spend most of my time learning and improving myself and my skills, and I aspire to be a multifaceted digital experience expert and design consultant / advisor.
                 </p>
                 <BlueLink href="/resume" label='View My Resume' />
+            </div>
+            <div className="">
+                <div className="grid grid-cols-12">
+                    
+                </div>
             </div>
             <div className='hidden md:grid grid-cols-3 gap-1 md:gap-4'>
                 <div className='h-full relative w-full ml-auto max-w-[99%] flex items-start justify-start'>

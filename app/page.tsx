@@ -83,19 +83,7 @@ export default function Home() {
         <Carousel projects={projects.web} />
       </section>
       
-      <section className='flex pt-16 flex-col gap-4'>
-        <Heading
-          title='Case Studies'
-          sub='Selected Projects'
-        />
-        <div ref={bottom_of_page} className='grid md:grid-cols-2  gap-x-8 gap-y-8 md:gap-y-12 xl:gap-y-16'>
-          {
-            projects.studies.map((project) => (
-              <ProjectCard key={project.title} variant="studies" project={project} />
-            ))
-          }
-        </div>
-      </section>
+
     </>
   );
 }
