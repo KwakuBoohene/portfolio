@@ -12,7 +12,7 @@ interface BlueLinkProps {
 const BlueLink = ({ href, label, color }: BlueLinkProps) => {
     return (
         <Link className={cn(
-            'flex items-center text-bluey font-medium',
+            'flex items-center text-bluey font-medium text-xl pt-4',
             color === "inventory" && "text-inventory",
             color === "resto" && "text-resto"
         )} href={href}>
