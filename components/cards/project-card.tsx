@@ -3,7 +3,7 @@ import { Project } from '@/types'
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface ProjectCardProps {
     project: Project;
@@ -13,9 +13,9 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, variant }: ProjectCardProps) => {
     const { preview, title, altTitle, sub, img, link, tags } = project
-    const pathname = usePathname()
+    const router = useRouter()
     return (
-        <article className='w-full min-h-max gap-2 flex flex-col '>
+        <article onClick={()=> router.push((link ? link : preview) || "/work")} className='w-full min-h-max gap-2 flex flex-col cursor-pointer '>
             <div className={`relative w-full aspect-square 
              
                     `}>
