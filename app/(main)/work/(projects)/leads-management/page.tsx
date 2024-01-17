@@ -78,7 +78,7 @@ function Grid({ item, color, title, textColor }: LeadsGrid) {
 
 export default function LeadsManagementPage() {
     return (
-        <main className="flex flex-col gap-10">
+        <main className="flex flex-col gap-10 lg:px-20">
             <section className="flex flex-col gap-4">
                 <Heading
                     title="Leads Management System"
@@ -268,7 +268,7 @@ export default function LeadsManagementPage() {
                     <p className="font-semibold text-xl">
                         Insights
                     </p>
-                    <div className="">
+                    <div className="leading-loose">
                         <p>
                             The test identified only a few minor problems, including: <br />
                             <span className="font-semibold">

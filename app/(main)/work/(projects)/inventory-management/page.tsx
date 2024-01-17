@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function InventoryManagementPage() {
     return (
-        <>
-            <section className="flex flex-col gap-4 px-16">
+        <div className='lg:px-20 leading-loose'>
+            <section className="flex flex-col gap-4 ">
                 <Heading
                     title="Inventory Management App"
                     sub="UI/UX Case Study"
@@ -20,12 +20,12 @@ export default function InventoryManagementPage() {
                     <BlueLink color="inventory" href={PROJECT_LINKS.inventory.prototype} label="View Prototype" />
                 </div>
             </section>
-            <section className=" w-full flex flex-col gap-4 md:mt-4 px-16">
+            <section className=" w-full flex flex-col gap-4 md:mt-4 ">
                 <div className="relative w-[80vw] h-[35vh]  md:w-[60vw] md:h-[60vh] mx-auto ">
                     <Image src='/images/mockups/inventory-showcase.svg' className="aspect-video" priority alt="thenga showcase" fill />
                 </div>
             </section>
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 w-full pt-4 px-16" >
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 w-full pt-4 " >
                 <article className="flex flex-col col-span-1 gap-2">
                     <p className="text-inventory font-medium">Role</p>
                     <p>
@@ -54,10 +54,8 @@ export default function InventoryManagementPage() {
             <div className="">
             <TabView data="inventory" color="inventory" />
             </div>
-            <div className="min-h-[500px] px-0 z-10">
-            <img  src="/images/thenga.svg" alt="t" />
-            </div>
             
-        </>
+            
+        </div>
     )
 }
